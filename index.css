@@ -1,0 +1,128 @@
+:root {
+  --clr-red: hsl(0, 78%, 62%);
+  --clr-Cyan: hsl(180, 62%, 55%);
+  --clr-Orange: hsl(34, 97%, 64%);
+  --clr-Blue: hsl(212, 86%, 64%);
+  --clr-Very-Dark-Blue: hsl(234, 12%, 34%);
+  --clr-Grayish-Blue: hsl(229, 6%, 66%);
+  --clr-Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  gap: 50px;
+  background-color: var(--clr-Very-Light-Gray);
+}
+h2 {
+  margin-top: 0px;
+  margin-bottom: 40px;
+}
+
+p {
+  margin-top: -15px;
+  padding-top: 0px;
+  margin-bottom: 20px;
+  font-weight: 200;
+  color: var(--clr-Very-Dark-Blue);
+}
+
+header {
+  align-self: center;
+  max-width: 300px;
+  text-align: center;
+  margin-top: 50px;
+}
+header span {
+  font-size: 22px;
+  font-weight: 200;
+}
+
+.card {
+  width: 300px;
+  background-color: white;
+  border-top: 3px solid;
+  border-radius: 4px;
+  box-shadow: 0px 17px 26px -8px rgba(76, 78, 97, 0.69);
+  -webkit-box-shadow: 0px 17px 26px -8px rgba(76, 78, 97, 0.69);
+  -moz-box-shadow: 0px 17px 26px -8px rgba(76, 78, 97, 0.69);
+  padding-top: 5px;
+}
+.card-container {
+  display: grid;
+  align-self: center;
+  row-gap: 25px;
+}
+/* Supervisor */
+.card-container :nth-child(1) {
+  border-color: var(--clr-Cyan);
+  grid-area: a;
+  align-self: center;
+}
+.card-container :nth-child(2) {
+  border-color: var(--clr-red);
+  grid-area: b;
+}
+.card-container :nth-child(3) {
+  border-color: var(--clr-Orange);
+  grid-area: c;
+}
+.card-container :nth-child(4) {
+  border-color: var(--clr-Blue);
+  grid-area: d;
+  align-self: center;
+}
+.card h3,
+.card p {
+  margin-left: 20px;
+  font-size: small;
+}
+
+.card img {
+  width: 50px;
+  margin-left: 230px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.card-container {
+  display: grid;
+  align-self: center;
+  row-gap: 25px;
+  column-gap: 25px;
+}
+.middle {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+@media (min-width: 364px) {
+  .card-container {
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "d";
+  }
+  header {
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 1250px) {
+  .card-container {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "a b d"
+      "a c d";
+  }
+  header {
+  }
+}
